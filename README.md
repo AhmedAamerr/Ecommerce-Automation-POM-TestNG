@@ -7,6 +7,7 @@ This project is a test automation framework designed to verify the end-to-end or
 - **Page Object Model (POM)**: A design pattern that helps to organize the project and improve maintainability by separating the test code from UI interactions.
 - **Data-Driven Testing**: The framework supports data-driven testing, allowing dynamic test input using Java Faker library and custom data files.
 - **TestNG Integration**: Utilizes TestNG for structured test case management, annotations, and data-driven capabilities.
+- **RestAssured**: Testing REST APIs by sending HTTP requests and validating responses.
 - **Extent Reports**: Provides detailed HTML reports with pass/fail status, logs, and step-by-step test execution results.
 - **WebDriver Manager**: Simplifies browser driver setup by automatically managing the required binaries.
 
@@ -16,6 +17,7 @@ This project is a test automation framework designed to verify the end-to-end or
 - **TestNG**: A testing framework for executing and managing test cases.
 - **Maven**: Manages project dependencies and builds the automation project.
 - **Faker Library**: Generates realistic random data for user inputs.
+- **RestAssured**: Testing REST APIs by sending HTTP requests and validating responses.
 - **Extent Reports**: Generates comprehensive HTML reports for test execution.
 - **WebDriver Manager**: Automatically handles WebDriver binaries, ensuring compatibility.
 
@@ -29,7 +31,7 @@ src/
 |           |-- utils/                # Utility classes (ExtentManager)
 |-- test/
     |-- java/
-        |-- org.example.tests/        # Test classes (CheckOutTests)
+        |-- org.example.tests/        # Test classes (CheckOutTests,ApiTest)
 
 
 ### **1. Pages Directory**
@@ -42,7 +44,7 @@ Includes data classes like `UserData` and `BillingData`. These classes provide i
 Holds utility classes like `ExtentManager`, which handles the initialization and management of Extent Reports.
 
 ### **4. tests Directory**
-Contains test classes (`CheckOutTests.java`) that implement end-to-end test scenarios using methods from the page classes.
+Contains test classes (`CheckOutTests.java`,' ApiTest.java') that implement end-to-end test scenarios using methods from the page classes.
 
 ## **How to Run the Tests**
 
