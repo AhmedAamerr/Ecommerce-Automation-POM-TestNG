@@ -15,11 +15,13 @@ import java.time.Duration;
 public class CheckOutTests {
     private WebDriver driver;  // Declare WebDriver at the class level
 
+    @BeforeSuite
+    public void suiteSetup() {
+        // Initialize Extent Report and Start Test
+        ExtentManager.initReport();
+    }
     @BeforeMethod
     public void setup() {
-        // Initialize Extent Report and Start Test
-            ExtentManager.initReport();
-
         // Set up WebDriver using WebDriverManager and ChromeDriver
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
