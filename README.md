@@ -85,8 +85,7 @@ cd e-commerce-automation
 mvn clean install
 
 ### **Execution**
-Run tests using Maven:
-mvn test
+Execute the needed test class via IDE
 
 ### **Test Reports**
 After the test execution, a detailed HTML report is generated in the test-output/ folder.
