@@ -39,7 +39,9 @@ public class HomePage {
                 // Click the add to cart button within this product's card
                cardFooter.click();
                 // Add item to the cart
-                WebElement addToCartBtn= driver.findElement(By.id("btn-add-to-cart"));
+                WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(5));
+                WebElement addToCartBtn= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn-add-to-cart")));
+                
                 addToCartBtn.click();
                 return; // Exit after adding one product to the cart
             }
