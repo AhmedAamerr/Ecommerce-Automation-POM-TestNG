@@ -1,0 +1,2 @@
+# E-commerce-Test-Automation-with-POM-Data-Driven-Approach-and-Extent-Reporting
+This project is designed to verify the end-to-end order creation process on an e-commerce platform. The automated test simulates a real user journey including user registration, login, adding products to the cart, and completing the checkout process. The framework employs various best practices and tools to ensure scalability and maintainability.
