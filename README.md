@@ -27,7 +27,7 @@ src/
 |   |-- java/
 |       |-- org.example/
 |           |-- pages/                # Page classes (LoginPage, HomePage, CheckOutPage)
-|           |-- testData/             # Test data classes (UserData, BillingData)
+|           |-- testData/             # Test data classes/Json (UserData.java, BillingData.java, userData.json)
 |           |-- utils/                # Utility classes (ExtentManager)
 |-- test/
     |-- java/
@@ -36,6 +36,26 @@ src/
 
 ### **1. Pages Directory**
 Contains classes representing individual pages of the application (e.g., `LoginPage.java`, `HomePage.java`). Each class includes methods to interact with UI elements, following the Page Object Model (POM) pattern.
+1. UI Tests (End-to-End Flow)
+Page Object Model (POM) is implemented for better maintainability. The UI flow includes the following pages:
+RegistrationPage: Handles user registration form filling and validation.
+LoginPage: Handles login functionality after registration.
+HomePage: Manages product interaction and cart addition.
+CartPage: Manages the cart and cart assertions.
+CheckOutPage: Handles the checkout flow, including the billing address and payment methods.
+2. API Test (User Creation)
+We have added an API test class using RestAssured to automate the user creation flow using the ReqRes API. This test sends a POST request to the /api/users endpoint and validates the following:
+
+The status code is 201 (Created).
+The response body contains the following data:
+id: A unique identifier for the newly created user.
+name: A name such as "John Doe".
+job: A job such as "Software Engineer".
+API Test Details:
+Create a JSON object with user data.
+Send a POST request to the ReqRes API.
+Assert the response status code is 201.
+Validate that the response body contains the ID, name, and job attributes.
 
 ### **2. testData Directory**
 Includes data classes like `UserData` and `BillingData`. These classes provide input data for the tests, making the framework flexible and easy to maintain.
@@ -44,7 +64,9 @@ Includes data classes like `UserData` and `BillingData`. These classes provide i
 Holds utility classes like `ExtentManager`, which handles the initialization and management of Extent Reports.
 
 ### **4. tests Directory**
-Contains test classes (`CheckOutTests.java`,' ApiTest.java') that implement end-to-end test scenarios using methods from the page classes.
+Contains test classes 
+- CheckOutTests.java that implements end-to-end test scenarios using methods from the page classes.
+- ApiTest.java that tests REST APIs by sending HTTP requests and validating responses.
 
 ## **How to Run the Tests**
 
